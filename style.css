@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    /* display: inline-block; */
+    /* border: 3px solid rgb(248, 248, 248); */
+    /* padding: 0px; */
+    /* width: 640px; */
+    height: 100vh;
+    content: '';
+    color: blue;
+    background-image: url('bg.jpg');
+    position: relative;
+    background-size: cover;
+}
+
+img {
+    /* to reduce size of rocket */
+    width: 300px;
+    /* to bring rocket from top to bottom position */
+    position: absolute;
+    bottom: 10px;
+    /* to bring rocket to center position but it won't comes to exact center postn */
+    left: 50%;
+    /*translate it in the left direction by -50% of the width to bring it to exactly center of bg-image*/
+    transform: translateX(-50%);
+    /* now our rocket is in the bottom-exact-center position */
+    /* we try to move it to fly in upward direction */
+    /* ease-in: starts slow and moves faster at end */
+    animation: fly 5s ease-in-out;
+}
+
+@keyframes fly {
+    0% {
+        /* Syntax: transform: translate(X, Y); */
+        transform: translate(-50%, 0);
+    }
+
+    100% {
+        /* transform: translateX(-50%, 100vh); */
+        /* Above code bring rocket to downward push */
+        /* To bring rocket to upward direction, we need to put -ve in Y-axis  */
+        transform: translate(-50%, -100vh);
+    }
+}
