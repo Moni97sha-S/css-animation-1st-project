@@ -9,7 +9,7 @@ body {
     /* padding: 0px; */
     /* width: 640px; */
     height: 100vh;
-    content: '';
+    content: 'Rocket Flies';
     color: blue;
     background-image: url('bg.jpg');
     position: relative;
@@ -29,6 +29,9 @@ img {
     /* now our rocket is in the bottom-exact-center position */
     /* we try to move it to fly in upward direction */
     /* ease-in: starts slow and moves faster at end */
+    animation: fly 5s ease-in-out paused;
+}
+img:hover {
     animation: fly 5s ease-in-out;
 }
 
